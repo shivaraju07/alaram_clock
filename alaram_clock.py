@@ -3,11 +3,11 @@ import winsound,time, os, platform
 
 def sound():
 
-	for i in range(2): # Number of repeats
+	for i in range(0,2): # Number of repeats
 		
-		for j in range(9): # Number of beeps
+		for j in range(0,9): # Number of beeps
 			
-			winsound.MessageBeep(-1) # Sound played
+			winsound.Beep(500,1000) # Sound played
 		
 		time.sleep(2) # How long between beeps
 
@@ -21,7 +21,7 @@ def alarm(n):
 
 def main():
 	print("What unit of time do you want to wait?\n (1) Hours\n (2) Minutes\n (3) Seconds\n (4) Combination")
-	main_input = input(": ")
+	main_input = int(input(": "))
 	
 	input_destinations(main_input)
 
